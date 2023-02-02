@@ -26,6 +26,7 @@ public class PlayerCamera : MonoBehaviour
 
     void Start()
     {
+        SetCameraRotation(Quaternion.identity);
         ToggleCursorState(false);
     }
 
