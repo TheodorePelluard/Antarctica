@@ -1,22 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
+[ExecuteAlways]
 public class GameParameterManager : MonoBehaviour
 {
-    public List<BoolGameParameter> BoolParameters;
-    public List<FloatGameParameter> FloatParameters;
+    public BoolGameParameter[] BoolParameters;
+    public FloatGameParameter[] FloatParameters;
 
     public void Awake()
     {
-        for (int i = 0; i < BoolParameters.Count; i++)
+        for (int i = 0; i < BoolParameters.Length; i++)
         {
             BoolParameters[i].ResetValue();
         }
 
-        for (int i = 0; i < FloatParameters.Count; i++)
+        for (int i = 0; i < FloatParameters.Length; i++)
         {
             FloatParameters[i].ResetValue();
         }
     }
+#if UNITY_EDITOR
+    public void OnValidate()
+    {
+        BoolParameters = Resources.FindObjectsOfTypeAll<BoolGameParameter>();
+        FloatParameters = Resources.FindObjectsOfTypeAll<FloatGameParameter>();
+    }
+#endif
 }

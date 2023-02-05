@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class DisplayDebugParameterValue : MonoBehaviour
 {
     [SerializeField] InputActionReference ToggleDebugMenuAction;
-    bool _toggleDebugMenu = false;
+    [SerializeField] bool _toggleDebugMenu = false;
 
     public List<BoolGameParameter> BoolParameters;
     public List<FloatGameParameter> FloatParameters;
@@ -19,6 +19,8 @@ public class DisplayDebugParameterValue : MonoBehaviour
 
     private void Start()
     {
+        _content.gameObject.SetActive(_toggleDebugMenu);
+
         _debugBoolValues = new List<TextMeshProUGUI>();
         _debugFloatValues = new List<TextMeshProUGUI>();
 

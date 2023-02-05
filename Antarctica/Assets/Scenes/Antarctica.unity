@@ -1978,7 +1978,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1280300843
 Transform:
@@ -2009,13 +2009,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoolParameters:
   - {fileID: 11400000, guid: 38dee9d1d0f47ad48b2b79040b84c555, type: 2}
-  - {fileID: 11400000, guid: 5608c41182a3f324089e89e6b5abc071, type: 2}
-  - {fileID: 11400000, guid: d420565bd9f38ec49a20d61b019c0917, type: 2}
   - {fileID: 11400000, guid: 01d69e943e586cd49816b4746a584687, type: 2}
+  - {fileID: 11400000, guid: d420565bd9f38ec49a20d61b019c0917, type: 2}
+  - {fileID: 11400000, guid: 5608c41182a3f324089e89e6b5abc071, type: 2}
   FloatParameters:
   - {fileID: 11400000, guid: a48bc44282fd9a944a9826a176db2d60, type: 2}
-  - {fileID: 11400000, guid: a54f94aa7289dab4b8cece9c5f21a882, type: 2}
   - {fileID: 11400000, guid: 4b1c61c54e9552547ac464db6f169ecb, type: 2}
+  - {fileID: 11400000, guid: a54f94aa7289dab4b8cece9c5f21a882, type: 2}
 --- !u!1 &1423282310
 GameObject:
   m_ObjectHideFlags: 0
