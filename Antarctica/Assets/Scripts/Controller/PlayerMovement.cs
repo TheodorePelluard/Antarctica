@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    bool _canMove = true;
+    [SerializeField] BoolGameParameter _canMove;
+    [SerializeField] BoolGameParameter _canSprint;
 
     [Header("Inputs")]
     [SerializeField] InputActionReference Move;
@@ -17,8 +18,9 @@ public class PlayerMovement : MonoBehaviour
     float _movementSpeed;
 
     [Header("Speed Parameters")]
-    [SerializeField] float WalkSpeed = 7f;
-    [SerializeField] float SprintSpeed = 12f;
+    [SerializeField] FloatGameParameter _walkSpeed;
+    [SerializeField] FloatGameParameter _sprintSpeed;
+    [SerializeField] FloatGameParameter _currentSpeed;
     [SerializeField] float _groundDrag;
 
     [Header("Slopes Parameters")]
@@ -39,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (_canMove)
+        if (_canMove.Get())
         {
             myInput();
             speedControl();
@@ -55,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(_canMove)
+        if(_canMove.Get())
             movePlayer();
     }
 
@@ -64,10 +66,10 @@ public class PlayerMovement : MonoBehaviour
         _horizontalInput = Move.action.ReadValue<Vector2>().x;
         _verticalInput = Move.action.ReadValue<Vector2>().y;
   
-        if (isSprinting())
-            _movementSpeed = SprintSpeed;
+        if (isSprinting() && _canSprint.Get())
+            _movementSpeed = _sprintSpeed.Get();
         else
-            _movementSpeed = WalkSpeed;
+            _movementSpeed = _walkSpeed.Get();
     }
 
     void movePlayer()
@@ -106,16 +108,13 @@ public class PlayerMovement : MonoBehaviour
                 _rb.velocity = new Vector3(limitedVelocity.x, _rb.velocity.y, limitedVelocity.z);
             }
         }
+
+        _currentSpeed.Set(_rb.velocity.magnitude);
     }
 
     public float GetLateralMovement()
     {
         return Move.action.ReadValue<Vector2>().x;
-    }
-
-    public void ToggleCanMove(bool state)
-    {
-        _canMove = state;
     }
 
     Vector3 getFlatVelocity()

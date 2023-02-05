@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerCamera : MonoBehaviour
 {
-    bool _canLook = true;
+    [SerializeField] BoolGameParameter _canLook;
 
     [HideInInspector]
     public Transform Camera => _camera;
@@ -32,7 +32,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void Update()
     {
-        if (_canLook)
+        if (_canLook.Get())
             rotateCamera();
     }
 
@@ -53,11 +53,6 @@ public class PlayerCamera : MonoBehaviour
     {
         Cursor.lockState = state ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = state;
-    }
-
-    public void ToggleCanLook(bool state)
-    {
-        _canLook = state;
     }
 
     public void SetCameraRotation(Vector3 angle)

@@ -14,8 +14,12 @@ public class PlayerManager : MonoBehaviour
 
     [Header("PlayerScript")]
     public PlayerMovement PlayerMovement;
+    [SerializeField] BoolGameParameter _playerCanMove;
+    [SerializeField] BoolGameParameter _playerCanSprint;
     public PlayerCamera PlayerCamera;
+    [SerializeField] BoolGameParameter _playerCanLook;
     public PlayerInteractor PlayerInteractor;
+    [SerializeField] BoolGameParameter _playerCanInteract;
     public PlayerInteractorInterface PlayerInteractorInterface;
 
     void Awake()
@@ -37,19 +41,21 @@ public class PlayerManager : MonoBehaviour
         ToggleRigibody(false);
         ToggleCollider(false);
 
-        PlayerMovement.ToggleCanMove(false);
-        PlayerCamera.ToggleCanLook(false);
-        PlayerInteractor.ToggleCanInteract(false);
+        _playerCanMove.Set(false);
+        _playerCanSprint.Set(false);
+        _playerCanLook.Set(false);
+        _playerCanInteract.Set(false);
     }
 
     public void EnablePlayerControl()
     {
         ToggleRigibody(true);
-        ToggleCollider(true);      
+        ToggleCollider(true);
 
-        PlayerMovement.ToggleCanMove(true);
-        PlayerCamera.ToggleCanLook(true);
-        PlayerInteractor.ToggleCanInteract(true);
+        _playerCanMove.Set(true);
+        _playerCanSprint.Set(true);
+        _playerCanLook.Set(true);
+        _playerCanInteract.Set(true);
     }
 
     public void ToggleCollider(bool state)

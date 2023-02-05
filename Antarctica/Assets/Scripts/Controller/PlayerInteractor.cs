@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteractor : MonoBehaviour
 {
-    bool _canInteract = true;
+    [SerializeField] BoolGameParameter _canInteract;
     [SerializeField] Transform _camera;
     [Space]
     [SerializeField] InputActionReference Interact;
@@ -23,15 +23,9 @@ public class PlayerInteractor : MonoBehaviour
         _alreadyInteract = false;
     }
 
-    public void ToggleCanInteract(bool state)
-    {
-        _canInteract = state;
-    }
-
-
     private void Update()
     {
-        if (!_canInteract)
+        if (!_canInteract.Get())
         {
             if (_currentInteractible != null)
             {

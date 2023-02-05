@@ -128,7 +128,7 @@ Transform:
   - {fileID: 3936544170477644668}
   - {fileID: 2076272423}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8464410449672649506
 MonoBehaviour:
@@ -142,12 +142,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd4433f1bb62cf41a9c4bdc0cd6f692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Inputs: {fileID: -944628639613478452, guid: 89fe39f2f89558a4d921814672b25cf8, type: 3}
   PlayerTransform: {fileID: 8464410449672649508}
   PlayerCollider: {fileID: 8464410450541358324}
   PlayerRigidbody: {fileID: 8464410449672649511}
   PlayerMovement: {fileID: 8464410449672649510}
+  _playerCanMove: {fileID: 11400000, guid: d420565bd9f38ec49a20d61b019c0917, type: 2}
+  _playerCanSprint: {fileID: 11400000, guid: 01d69e943e586cd49816b4746a584687, type: 2}
   PlayerCamera: {fileID: 8464410449672649517}
+  _playerCanLook: {fileID: 11400000, guid: 5608c41182a3f324089e89e6b5abc071, type: 2}
   PlayerInteractor: {fileID: 8464410449672649504}
+  _playerCanInteract: {fileID: 11400000, guid: 38dee9d1d0f47ad48b2b79040b84c555, type: 2}
   PlayerInteractorInterface: {fileID: 0}
 --- !u!114 &8464410449672649510
 MonoBehaviour:
@@ -161,10 +166,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca1539b9479182349a48c1b2adef0147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canMove: {fileID: 11400000, guid: d420565bd9f38ec49a20d61b019c0917, type: 2}
+  _canSprint: {fileID: 11400000, guid: 01d69e943e586cd49816b4746a584687, type: 2}
   Move: {fileID: -1680190386980627800, guid: 89fe39f2f89558a4d921814672b25cf8, type: 3}
   Sprint: {fileID: -8886980572094230552, guid: 89fe39f2f89558a4d921814672b25cf8, type: 3}
-  WalkSpeed: 5
-  SprintSpeed: 9
+  _walkSpeed: {fileID: 11400000, guid: a48bc44282fd9a944a9826a176db2d60, type: 2}
+  _sprintSpeed: {fileID: 11400000, guid: 4b1c61c54e9552547ac464db6f169ecb, type: 2}
+  _currentSpeed: {fileID: 11400000, guid: a54f94aa7289dab4b8cece9c5f21a882, type: 2}
   _groundDrag: 10
   _maxSlopeAngle: 35
   _slopeDownForce: 80
@@ -211,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a206872dc99e444ab8610766c2a8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canLook: {fileID: 11400000, guid: 5608c41182a3f324089e89e6b5abc071, type: 2}
   _camera: {fileID: 0}
   Look: {fileID: -5630151704836100654, guid: 89fe39f2f89558a4d921814672b25cf8, type: 3}
   CameraSensitivityX: 20
@@ -250,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3b33d5cf5cc324bb1b483a0a46415c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canInteract: {fileID: 11400000, guid: 38dee9d1d0f47ad48b2b79040b84c555, type: 2}
   _camera: {fileID: 0}
   Interact: {fileID: 1120369429361536294, guid: 89fe39f2f89558a4d921814672b25cf8,
     type: 3}
