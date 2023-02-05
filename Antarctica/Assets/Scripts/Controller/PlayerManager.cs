@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
+    [SerializeField] InputActionAsset Inputs;
     public static PlayerManager Instance;
 
     public Transform PlayerTransform;
@@ -26,6 +28,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        Inputs.Enable();
         EnablePlayerControl();
     }
 
@@ -57,5 +60,10 @@ public class PlayerManager : MonoBehaviour
     public void ToggleRigibody(bool state)
     {
         PlayerRigidbody.useGravity = state;
+    }
+
+    private void OnDestroy()
+    {
+        Inputs.Disable();
     }
 }

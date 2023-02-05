@@ -2944,7 +2944,8 @@ PrefabInstance:
       propertyPath: _transformToFollow
       value: 
       objectReference: {fileID: 2074418865}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2056519559927098238, guid: cce0364d64879f0449108cc46d6e1427, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3045,6 +3046,12 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 330585546}
+    - target: {fileID: 8464410449672649506, guid: 819e46b7ec71e9a4c863e94c5e290b0c,
+        type: 3}
+      propertyPath: Inputs
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 89fe39f2f89558a4d921814672b25cf8,
+        type: 3}
     - target: {fileID: 8464410449672649506, guid: 819e46b7ec71e9a4c863e94c5e290b0c,
         type: 3}
       propertyPath: PlayerInteractorInterface

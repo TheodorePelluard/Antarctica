@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5628386895873418327}
   - component: {fileID: 8823693236671883140}
-  - component: {fileID: 2056519559927098238}
   - component: {fileID: 668506183452127359}
   m_Layer: 0
   m_Name: Camera_RenderingPlayer
@@ -18,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5628386895873418327
 Transform:
   m_ObjectHideFlags: 0
@@ -85,14 +84,6 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2056519559927098238
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88171250068089383}
-  m_Enabled: 1
 --- !u!114 &668506183452127359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +296,7 @@ Transform:
   m_Children:
   - {fileID: 4571156926828439499}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4571156927493488025
 MonoBehaviour:
