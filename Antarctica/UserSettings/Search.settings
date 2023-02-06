@@ -7,9 +7,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.310DEAF1" = "play"
+	"last_search.310DEAF1" = "Input"
 	"OpenInspectorPreview.310DEAF1" = "0"
-	"currentGroup.310DEAF1" = "settings"
+	"currentGroup.310DEAF1" = "menu"
 }
 providers = {
 	adb = {

@@ -79,9 +79,9 @@ public class ExtendedScriptableObjectDrawer : PropertyDrawer {
 		var indentOffset = indentedPosition.x - position.x;
 		propertyRect = new Rect(position.x + (EditorGUIUtility.labelWidth - indentOffset), position.y, position.width - (EditorGUIUtility.labelWidth - indentOffset), EditorGUIUtility.singleLineHeight);
 
-		if(propertySO != null || property.objectReferenceValue == null) {
-			propertyRect.width -= buttonWidth;
-		}
+		//if(propertySO != null || property.objectReferenceValue == null) {
+		//	propertyRect.width -= buttonWidth;
+		//}
 		
 		property.objectReferenceValue = EditorGUI.ObjectField(propertyRect, GUIContent.none, property.objectReferenceValue, type, false);
 		if (GUI.changed) property.serializedObject.ApplyModifiedProperties();

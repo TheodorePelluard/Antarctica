@@ -1,0 +1,269 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8385536381443659679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6017eff0073d875418088cec2527723b, type: 3}
+  m_Name: Exit
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 680, y: -120}
+  ports:
+    keys:
+    - Entry
+    values:
+    - _fieldName: Entry
+      _node: {fileID: -8385536381443659679}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Exit
+        node: {fileID: -8256365072946261422}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Reader: {fileID: 0}
+  Selected: 0
+  OnEnterNodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitNodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ExitEvent: {fileID: 0}
+  Entry: 0
+--- !u!114 &-8256365072946261422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824cc4205f59b2c4e86ae96ef9c74771, type: 3}
+  m_Name: 'Jack:  Aller en route mau...'
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 344, y: -120}
+  ports:
+    keys:
+    - Entry
+    - Exit
+    values:
+    - _fieldName: Entry
+      _node: {fileID: -8256365072946261422}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Exit
+        node: {fileID: -3717425590474003861}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: -8256365072946261422}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Entry
+        node: {fileID: -8385536381443659679}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Reader: {fileID: 0}
+  Selected: 0
+  OnEnterNodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitNodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  Entry: 0
+  Exit: 0
+  SpeakerName: Jack
+  DialogueLine: ' Aller en route mauvaise troupe :3'
+  AutoNext: 1
+--- !u!114 &-6850629116430854509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13bbc657b9a2dc84cab0ba97d13d77ed, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -600, y: -120}
+  ports:
+    keys:
+    - Exit
+    values:
+    - _fieldName: Exit
+      _node: {fileID: -6850629116430854509}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Entry
+        node: {fileID: 7189790890117066422}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Reader: {fileID: 0}
+  Selected: 0
+  OnEnterNodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitNodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  StartEvent: {fileID: 11400000, guid: ddafc88b7aee08742ab5ed81c54f9031, type: 2}
+  Exit: 0
+--- !u!114 &-3717425590474003861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824cc4205f59b2c4e86ae96ef9c74771, type: 3}
+  m_Name: "Yvette: Carr\xE9ment !"
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 24, y: -120}
+  ports:
+    keys:
+    - Entry
+    - Exit
+    values:
+    - _fieldName: Entry
+      _node: {fileID: -3717425590474003861}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Exit
+        node: {fileID: 7189790890117066422}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: -3717425590474003861}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Entry
+        node: {fileID: -8256365072946261422}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Reader: {fileID: 0}
+  Selected: 0
+  OnEnterNodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitNodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  Entry: 0
+  Exit: 0
+  SpeakerName: Yvette
+  DialogueLine: "Carr\xE9ment !"
+  AutoNext: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23907396c2b874c46b4ec9131755c03b, type: 3}
+  m_Name: Dialogue Graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -6850629116430854509}
+  - {fileID: 7189790890117066422}
+  - {fileID: -3717425590474003861}
+  - {fileID: -8385536381443659679}
+  - {fileID: -8256365072946261422}
+  Current: {fileID: -3717425590474003861}
+--- !u!114 &7189790890117066422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824cc4205f59b2c4e86ae96ef9c74771, type: 3}
+  m_Name: 'Jack: C''est parti !'
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -296, y: -120}
+  ports:
+    keys:
+    - Entry
+    - Exit
+    values:
+    - _fieldName: Entry
+      _node: {fileID: 7189790890117066422}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Exit
+        node: {fileID: -6850629116430854509}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: 7189790890117066422}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Entry
+        node: {fileID: -3717425590474003861}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Reader: {fileID: 0}
+  Selected: 0
+  OnEnterNodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitNodeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  Entry: 0
+  Exit: 0
+  SpeakerName: Jack
+  DialogueLine: C'est parti !
+  AutoNext: 1

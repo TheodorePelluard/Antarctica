@@ -1198,6 +1198,53 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 3
+--- !u!1 &545245907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545245909}
+  - component: {fileID: 545245910}
+  m_Layer: 0
+  m_Name: DialogueGraph
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545245909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545245907}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 48.185944, y: -52.20611, z: 122.311424}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545245910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545245907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec7b831f679057459e15b59c4d8ec2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startNode: {fileID: -6850629116430854509, guid: ebdfaacc2ad5b0341936129275a695db,
+    type: 2}
+  Graph: {fileID: 11400000, guid: ebdfaacc2ad5b0341936129275a695db, type: 2}
 --- !u!1 &557848085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,13 +2056,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoolParameters:
   - {fileID: 11400000, guid: 38dee9d1d0f47ad48b2b79040b84c555, type: 2}
+  - {fileID: 11400000, guid: 5608c41182a3f324089e89e6b5abc071, type: 2}
   - {fileID: 11400000, guid: 01d69e943e586cd49816b4746a584687, type: 2}
   - {fileID: 11400000, guid: d420565bd9f38ec49a20d61b019c0917, type: 2}
-  - {fileID: 11400000, guid: 5608c41182a3f324089e89e6b5abc071, type: 2}
   FloatParameters:
   - {fileID: 11400000, guid: a48bc44282fd9a944a9826a176db2d60, type: 2}
-  - {fileID: 11400000, guid: 4b1c61c54e9552547ac464db6f169ecb, type: 2}
   - {fileID: 11400000, guid: a54f94aa7289dab4b8cece9c5f21a882, type: 2}
+  - {fileID: 11400000, guid: 4b1c61c54e9552547ac464db6f169ecb, type: 2}
 --- !u!1 &1423282310
 GameObject:
   m_ObjectHideFlags: 0

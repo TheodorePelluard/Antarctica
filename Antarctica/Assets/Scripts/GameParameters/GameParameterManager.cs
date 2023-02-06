@@ -11,6 +11,7 @@ public class GameParameterManager : MonoBehaviour
 {
     public BoolGameParameter[] BoolParameters;
     public FloatGameParameter[] FloatParameters;
+    public EventGameParameter[] EventParameters;
 
     public void Awake()
     {
@@ -29,6 +30,7 @@ public class GameParameterManager : MonoBehaviour
     {
         BoolParameters = Resources.FindObjectsOfTypeAll<BoolGameParameter>();
         FloatParameters = Resources.FindObjectsOfTypeAll<FloatGameParameter>();
+        EventParameters = Resources.FindObjectsOfTypeAll<EventGameParameter>();
     }
 #endif
 }
