@@ -32,12 +32,8 @@ MonoBehaviour:
       _dynamic: 0
   Reader: {fileID: 0}
   Selected: 0
-  OnEnterNodeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitNodeEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  OnEntryDynamicPortsCount: 0
+  OnExitDynamicPortsCount: 0
   ExitEvent: {fileID: 0}
   Entry: 0
 --- !u!114 &-8256365072946261422
@@ -58,6 +54,7 @@ MonoBehaviour:
     keys:
     - Entry
     - Exit
+    - OnEntry
     values:
     - _fieldName: Entry
       _node: {fileID: -8256365072946261422}
@@ -83,14 +80,19 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OnEntry
+      _node: {fileID: -8256365072946261422}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   Reader: {fileID: 0}
   Selected: 0
-  OnEnterNodeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitNodeEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  OnEntryDynamicPortsCount: 0
+  OnExitDynamicPortsCount: 0
   Entry: 0
   Exit: 0
   SpeakerName: Jack
@@ -128,13 +130,10 @@ MonoBehaviour:
       _dynamic: 0
   Reader: {fileID: 0}
   Selected: 0
-  OnEnterNodeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitNodeEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  OnEntryDynamicPortsCount: 0
+  OnExitDynamicPortsCount: 0
   StartEvent: {fileID: 11400000, guid: ddafc88b7aee08742ab5ed81c54f9031, type: 2}
+  AutoStart: 1
   Exit: 0
 --- !u!114 &-3717425590474003861
 MonoBehaviour:
@@ -181,12 +180,8 @@ MonoBehaviour:
       _dynamic: 0
   Reader: {fileID: 0}
   Selected: 0
-  OnEnterNodeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitNodeEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  OnEntryDynamicPortsCount: 0
+  OnExitDynamicPortsCount: 0
   Entry: 0
   Exit: 0
   SpeakerName: Yvette
@@ -210,7 +205,7 @@ MonoBehaviour:
   - {fileID: -3717425590474003861}
   - {fileID: -8385536381443659679}
   - {fileID: -8256365072946261422}
-  Current: {fileID: -3717425590474003861}
+  Current: {fileID: -8385536381443659679}
 --- !u!114 &7189790890117066422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,12 +251,8 @@ MonoBehaviour:
       _dynamic: 0
   Reader: {fileID: 0}
   Selected: 0
-  OnEnterNodeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitNodeEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  OnEntryDynamicPortsCount: 0
+  OnExitDynamicPortsCount: 0
   Entry: 0
   Exit: 0
   SpeakerName: Jack

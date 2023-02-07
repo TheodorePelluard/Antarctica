@@ -18,13 +18,12 @@ public class StartNodeEditor : BaseNodeEditor
 
         base.OnBodyGUI();
 
-        GUILayout.Space(10f);
-
         if (_startNode == null)
             _startNode = target as StartNode;
 
+        NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("AutoStart"));
+        GUILayout.Space(10f);
         NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("StartEvent"));
-
         if (GUILayout.Button("Raise Event"))
         {
             if (_startNode != null && _startNode.StartEvent != null)

@@ -31,15 +31,5 @@ public class BaseNodeEditor : NodeEditor
 
     public override void OnBodyGUI()
     {
-        showNodeAction = EditorGUILayout.BeginFoldoutHeaderGroup(showNodeAction, "Node Actions");
-
-        if (showNodeAction)
-        {
-            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("OnEnterNodeEvent"));
-            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("OnExitNodeEvent"));
-        }
-
-        EditorGUILayout.EndFoldoutHeaderGroup();
-
     }
 }
