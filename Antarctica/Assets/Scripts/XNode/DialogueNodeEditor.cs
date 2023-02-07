@@ -14,7 +14,16 @@ public class DialogueNodeEditor : BaseNodeEditor
 
     public override void OnHeaderGUI()
     {
-        base.OnHeaderGUI();
+        if (_dialogueNode != null && _dialogueNode.DialogueParameter != null)
+            base.OnHeaderGUI();
+        else
+        {
+            GUILayout.BeginHorizontal();
+            GUILayout.Box(EditorGUIUtility.IconContent("CollabConflict Icon"), GUILayout.Width(20f), GUILayout.Height(20f));
+            base.OnHeaderGUI();
+            GUILayout.Space(10f);
+            GUILayout.EndHorizontal();
+        }
     }
 
     public override void OnBodyGUI()
@@ -23,32 +32,42 @@ public class DialogueNodeEditor : BaseNodeEditor
 
         if (_dialogueNode == null)
             _dialogueNode = target as DialogueNode;
-        else
+        else if (_dialogueNode.DialogueParameter != null)
         {
-            string newName = _dialogueNode.SpeakerName + ": " + _dialogueNode.DialogueLine;
+            string newName = _dialogueNode.DialogueParameter.name;
 
             if (newName.Length > 24)
                 newName = newName.Substring(0, 25) + "...";
 
             _dialogueNode.name = newName;
         }
+        else
+            _dialogueNode.name = "Dialogue";
 
         GUILayout.BeginHorizontal();
         NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("Entry"));
         NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("Exit"));
         GUILayout.EndHorizontal();
 
-        GUILayout.BeginVertical();
-
         base.OnBodyGUI();
 
-        GUILayout.Space(10f);
+        GUILayout.BeginHorizontal();
+        if (_dialogueNode.DialogueParameter && _dialogueNode.DialogueParameter.DialogueSubtitle)
+        {
+            string labelContent = _dialogueNode.DialogueParameter.DialogueSubtitle.Data;
 
-        GUILayout.EndVertical();
+            if (labelContent.Length > 35)
+                labelContent = labelContent.Substring(0, 35) + "...";
 
-        NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("SpeakerName"));
-        NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("DialogueLine"));
-        NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("AutoNext"));
+            GUILayout.Label(string.Format("'{0}'", labelContent));
+        }
+
+        GUILayout.EndHorizontal();
+
+        NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("DialogueParameter"));
+
+        if(_dialogueNode != null && _dialogueNode.DialogueParameter != null)
+            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("AutoNext"));
 
         GUILayout.Space(10f);
 

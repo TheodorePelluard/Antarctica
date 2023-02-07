@@ -8,9 +8,7 @@ public class DialogueNode : BaseNode
 {
     [Input] public int Entry;
     [Output] public int Exit;
-    public string SpeakerName;
-    [TextArea(0,10)]
-    public string DialogueLine;
+    public Dialogue DialogueParameter;
     public bool AutoNext = false;
 
     public override void OnEnterNode()

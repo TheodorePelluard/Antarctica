@@ -47,7 +47,7 @@ public class DialogueGraphReader : MonoBehaviour
 
     public void ReadDialogueNode(DialogueNode node)
     {
-        Debug.Log(node.SpeakerName + ": " + node.DialogueLine);
+        Debug.Log(node.DialogueParameter.DialogueSubtitle.Data);
 
         if(node.AutoNext)
             StartCoroutine(DelayReading());

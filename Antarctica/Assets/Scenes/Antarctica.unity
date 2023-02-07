@@ -279,6 +279,7 @@ Transform:
   - {fileID: 410087041}
   - {fileID: 825051552}
   - {fileID: 1280300843}
+  - {fileID: 1691263793}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1823,12 +1824,68 @@ Transform:
   m_Father: {fileID: 1997186071}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &892733186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2056a7a04199c104bb47d9c07e3ba59d, type: 3}
+  m_Name: LA_Yvette_02
+  m_EditorClassIdentifier: 
+  Data: {fileID: 0}
+  LocalizedElements: []
+--- !u!114 &916980996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2056a7a04199c104bb47d9c07e3ba59d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data: {fileID: 0}
+  LocalizedElements: []
+--- !u!114 &971138190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2056a7a04199c104bb47d9c07e3ba59d, type: 3}
+  m_Name: LA_Jack_01
+  m_EditorClassIdentifier: 
+  Data: {fileID: 0}
+  LocalizedElements: []
 --- !u!4 &1011355545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4571156927493488024, guid: cce0364d64879f0449108cc46d6e1427,
     type: 3}
   m_PrefabInstance: {fileID: 4571156927154270721}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1019284977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf920907205f294db2b44194192128e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data: 
+  LocalizedElements: []
 --- !u!1 &1098108359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,6 +1962,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098108359}
   m_CullTransparentMesh: 1
+--- !u!114 &1212369584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2056a7a04199c104bb47d9c07e3ba59d, type: 3}
+  m_Name: LA_Jack_01
+  m_EditorClassIdentifier: 
+  Data: {fileID: 0}
+  LocalizedElements: []
 --- !u!1 &1255603478
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,6 +2134,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a48bc44282fd9a944a9826a176db2d60, type: 2}
   - {fileID: 11400000, guid: a54f94aa7289dab4b8cece9c5f21a882, type: 2}
   - {fileID: 11400000, guid: 4b1c61c54e9552547ac464db6f169ecb, type: 2}
+  EventParameters:
+  - {fileID: 11400000, guid: ddafc88b7aee08742ab5ed81c54f9031, type: 2}
+--- !u!114 &1304976045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2056a7a04199c104bb47d9c07e3ba59d, type: 3}
+  m_Name: LA_Yvette_02
+  m_EditorClassIdentifier: 
+  Data: {fileID: 0}
+  LocalizedElements: []
 --- !u!1 &1423282310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,6 +2255,20 @@ Transform:
   m_Father: {fileID: 1997186071}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446360525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2056a7a04199c104bb47d9c07e3ba59d, type: 3}
+  m_Name: LA_Jack_01
+  m_EditorClassIdentifier: 
+  Data: {fileID: 0}
+  LocalizedElements: []
 --- !u!1 &1458074856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,6 +2491,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617767413}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1655673983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2056a7a04199c104bb47d9c07e3ba59d, type: 3}
+  m_Name: LA_Yvette_02
+  m_EditorClassIdentifier: 
+  Data: {fileID: 0}
+  LocalizedElements: []
 --- !u!1001 &1657376398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2508,6 +2623,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dcaa7530e182584095d5ab2d2056d03, type: 3}
+--- !u!1 &1691263792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1691263793}
+  - component: {fileID: 1691263794}
+  m_Layer: 0
+  m_Name: LocalizationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1691263793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691263792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 54577521}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1691263794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691263792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b47096406dbf64d9b838cf26d7e689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _forceDebugLanguage: 0
+  _debugLanguage: 0
+  _currentLanguageParameter: {fileID: 11400000, guid: 2bd965b21da07eb409c002c1dd811402,
+    type: 2}
+  LocalizedAudioClips:
+  - {fileID: 11400000, guid: c0a3f6ff3abd79f45bb9e27a06072c53, type: 2}
+  - {fileID: 11400000, guid: 2d06c2aa266d9ba489020d7cbe61d504, type: 2}
+  - {fileID: 11400000, guid: e23e01fe860530641973c4f4319b7b86, type: 2}
+  - {fileID: 916980996}
+  - {fileID: 1304976045}
+  - {fileID: 1212369584}
+  - {fileID: 1655673983}
+  - {fileID: 1446360525}
+  - {fileID: 892733186}
+  - {fileID: 971138190}
+  LocalizedTexts:
+  - {fileID: 11400000, guid: 8601fcdca5c650f47879e6384897b4bc, type: 2}
+  - {fileID: 11400000, guid: 93d160417f1e75d40a1c64ca23005b73, type: 2}
+  - {fileID: 11400000, guid: e33cf12da30a9f54c95110aa60918321, type: 2}
+  - {fileID: 1019284977}
 --- !u!1 &1800845210
 GameObject:
   m_ObjectHideFlags: 0
