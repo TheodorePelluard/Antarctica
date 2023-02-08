@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbf920907205f294db2b44194192128e, type: 3}
-  m_Name: LT_Jack_02
+  m_Script: {fileID: 11500000, guid: 2056a7a04199c104bb47d9c07e3ba59d, type: 3}
+  m_Name: LA_Louis_Giffard_INT_FR
   m_EditorClassIdentifier: 
-  Data: Aller en route mauvaise troupe, allons-y ! :3
+  Data: {fileID: 0}
   LocalizedElements:
   - Language: 0
-    Element: Aller en route mauvaise troupe, allons-y ! :3
+    Element: {fileID: 8300000, guid: b9f34a663f7d60b42bf9c451f99804e4, type: 3}
   - Language: 1
-    Element: Here we go team :3
+    Element: {fileID: 8300000, guid: 4d66bf99848dd844a8e11d8fe7cc376b, type: 3}

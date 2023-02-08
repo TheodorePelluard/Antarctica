@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2056a7a04199c104bb47d9c07e3ba59d, type: 3}
-  m_Name: LA_Jack_01
+  m_Script: {fileID: 11500000, guid: 48ee3b290546ccb43993456f2fd82394, type: 3}
+  m_Name: LA_Louis_Hello_FR
   m_EditorClassIdentifier: 
-  Data: {fileID: 0}
-  LocalizedElements: []
+  DialogueClip: {fileID: 11400000, guid: 82935c0af913d9849914ebeeba209d5a, type: 2}
+  DialogueSubtitle: {fileID: 11400000, guid: c286ef68473011d47955a5db332dd8d0, type: 2}
+  Delay: 0

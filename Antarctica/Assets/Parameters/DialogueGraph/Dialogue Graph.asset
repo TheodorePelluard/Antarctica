@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 824cc4205f59b2c4e86ae96ef9c74771, type: 3}
-  m_Name: DL_Jack_02
+  m_Name: LA_Louis_Ladder_FR
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 344, y: -120}
@@ -95,7 +95,8 @@ MonoBehaviour:
   OnExitDynamicPortsCount: 0
   Entry: 0
   Exit: 0
-  DialogueParameter: {fileID: 11400000, guid: 3e4d26c45a54356469047fd17e39b51c, type: 2}
+  DialogueParameter: {fileID: 11400000, guid: eec2edcce167cfc4b91604a141e3bc65, type: 2}
+  Delay: 0
   AutoNext: 1
 --- !u!114 &-6850629116430854509
 MonoBehaviour:
@@ -132,7 +133,7 @@ MonoBehaviour:
   OnEntryDynamicPortsCount: 0
   OnExitDynamicPortsCount: 0
   StartEvent: {fileID: 11400000, guid: ddafc88b7aee08742ab5ed81c54f9031, type: 2}
-  AutoStart: 0
+  AutoStart: 1
   Exit: 0
 --- !u!114 &-3717425590474003861
 MonoBehaviour:
@@ -144,7 +145,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 824cc4205f59b2c4e86ae96ef9c74771, type: 3}
-  m_Name: DL_Yvette_02
+  m_Name: LA_Louis_Hello_FR
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 24, y: -120}
@@ -183,7 +184,8 @@ MonoBehaviour:
   OnExitDynamicPortsCount: 0
   Entry: 0
   Exit: 0
-  DialogueParameter: {fileID: 11400000, guid: 633ba486eea9cc34dac6a16678a4c265, type: 2}
+  DialogueParameter: {fileID: 11400000, guid: 2e833664188ebda43870adbee0c85ccc, type: 2}
+  Delay: 0
   AutoNext: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -214,7 +216,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 824cc4205f59b2c4e86ae96ef9c74771, type: 3}
-  m_Name: DL_Jack_01
+  m_Name: LA_Louis_Giffard_INT_FR
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -296, y: -120}
@@ -253,5 +255,6 @@ MonoBehaviour:
   OnExitDynamicPortsCount: 0
   Entry: 0
   Exit: 0
-  DialogueParameter: {fileID: 11400000, guid: 750a513b06a67b94f8407608abc7b24a, type: 2}
+  DialogueParameter: {fileID: 11400000, guid: 64f69adeda067a442a35cae957ae9c95, type: 2}
+  Delay: 2
   AutoNext: 1

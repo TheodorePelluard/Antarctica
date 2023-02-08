@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using XNode;
 
@@ -7,6 +8,9 @@ public class DialogueGraphReader : MonoBehaviour
 {
     public StartNode startNode;
     public DialogueGraph Graph;
+    [Header("Dialogues")]
+    public AudioSource DialogueSource;
+    Coroutine _readDialogueNodeCoroutine;
 
     private void Awake()
     {
@@ -15,13 +19,13 @@ public class DialogueGraphReader : MonoBehaviour
 
     private void setupNodes()
     {
-        Graph.Current = startNode;
-        Graph.Current.OnEnterNode();
-
         foreach (BaseNode node in Graph.nodes)
         {
             node.Reader = this;
         }
+
+        Graph.Current = startNode;
+        Graph.Current.OnEnterNode();
     }
 
     public void NextNode(string fieldName = "Exit")
@@ -37,25 +41,53 @@ public class DialogueGraphReader : MonoBehaviour
         }
     }
 
+
+    public void ReadDialogueNode(DialogueNode node)
+    {
+        if(_readDialogueNodeCoroutine != null)
+        {
+            StopCoroutine(_readDialogueNodeCoroutine);
+            _readDialogueNodeCoroutine = null;
+        }
+
+        if (_readDialogueNodeCoroutine == null && node.DialogueParameter.DialogueClip.Data != null)
+            _readDialogueNodeCoroutine = StartCoroutine(ReadDialogueNodeCoroutine());
+
+        IEnumerator ReadDialogueNodeCoroutine()
+        {
+            Debug.Log(node.DialogueParameter.DialogueSubtitle.Data);
+
+            DialogueSource.clip = node.DialogueParameter.DialogueClip.Data;
+            DialogueSource.Play();
+
+            yield return new WaitForSeconds(node.DialogueParameter.DialogueClip.Data.length + node.DialogueParameter.Delay);
+
+            DialogueSource.Stop();
+            DialogueSource.clip = null;
+
+            if (node.AutoNext)
+                NextNode();
+
+            _readDialogueNodeCoroutine = null;
+        }
+    }
+
+    //async void waitForDialogueToComplete(float dialogueDuration)
+    //{
+    //    await Task.Delay((int)(dialogueDuration*100f));
+    //}
+
     private void OnDisable()
     {
         foreach (BaseNode node in Graph.nodes)
         {
             node.OnExitNode();
         }
-    }
 
-    public void ReadDialogueNode(DialogueNode node)
-    {
-        Debug.Log(node.DialogueParameter.DialogueSubtitle.Data);
-
-        if(node.AutoNext)
-            StartCoroutine(DelayReading());
-
-        IEnumerator DelayReading()
+        if(_readDialogueNodeCoroutine != null)
         {
-            yield return new WaitForSeconds(2f);
-            NextNode();
+            StopCoroutine(_readDialogueNodeCoroutine);
+            _readDialogueNodeCoroutine = null;
         }
     }
 }

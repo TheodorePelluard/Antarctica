@@ -11,6 +11,7 @@ public class DialogueNodeEditor : BaseNodeEditor
     DialogueNode _dialogueNode;
     bool _showOnEntryEvent = true;
     bool _showOnExitEvent = true;
+    float _delayValue = 0f;
 
     public override void OnHeaderGUI()
     {
@@ -66,8 +67,17 @@ public class DialogueNodeEditor : BaseNodeEditor
 
         NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("DialogueParameter"));
 
-        if(_dialogueNode != null && _dialogueNode.DialogueParameter != null)
+        if (_dialogueNode != null && _dialogueNode.DialogueParameter != null)
+        {
+            var delay = serializedObject.FindProperty("Delay").floatValue;
+            delay = EditorGUILayout.FloatField("Delay", delay);
+
+            _dialogueNode.Delay = delay;
+            _dialogueNode.DialogueParameter.Delay = delay;
+
+            //EditorGUILayout.PropertyField(serializedObject.FindProperty("Delay"));
             NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("AutoNext"));
+        }
 
         GUILayout.Space(10f);
 

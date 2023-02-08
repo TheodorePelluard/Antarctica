@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ee3b290546ccb43993456f2fd82394, type: 3}
-  m_Name: DL_Jack_01
+  m_Script: {fileID: 11500000, guid: dbf920907205f294db2b44194192128e, type: 3}
+  m_Name: LT_Louis_Hello_FR
   m_EditorClassIdentifier: 
-  DialogueClip: {fileID: 11400000, guid: e23e01fe860530641973c4f4319b7b86, type: 2}
-  DialogueSubtitle: {fileID: 11400000, guid: e33cf12da30a9f54c95110aa60918321, type: 2}
+  Data: 
+  LocalizedElements:
+  - Language: 0
+    Element: "Ici c'\xE9tait l'annexe de la gallerie des machines"
+  - Language: 1
+    Element: Bonsoir mon amis

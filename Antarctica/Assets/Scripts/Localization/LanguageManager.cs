@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.IO;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -14,8 +15,8 @@ public class LanguageManager : MonoBehaviour
     [Space]
     [SerializeField] CurrentLanguageParameter _currentLanguageParameter;
     [Space]
-    public LocalizedAsset<Languages, AudioClip>[] LocalizedAudioClips;
-    public LocalizedAsset<Languages, string>[] LocalizedTexts;
+    public List<LocalizedAsset<Languages, AudioClip>> LocalizedAudioClips;
+    public List<LocalizedAsset<Languages, string>> LocalizedTexts;
 
     private void Start()
     {
@@ -37,12 +38,12 @@ public class LanguageManager : MonoBehaviour
                     _currentLanguageParameter.Language = Languages.EN;
             }
 
-            for (int i = 0; i < LocalizedAudioClips.Length; i++)
+            for (int i = 0; i < LocalizedAudioClips.Count; i++)
             {
                 LocalizedAudioClips[i].UpdateValue(_currentLanguageParameter.Language);
             }
 
-            for (int i = 0; i < LocalizedTexts.Length; i++)
+            for (int i = 0; i < LocalizedTexts.Count; i++)
             {
                 LocalizedTexts[i].UpdateValue(_currentLanguageParameter.Language);
             }
@@ -52,8 +53,25 @@ public class LanguageManager : MonoBehaviour
 #if UNITY_EDITOR
     public void OnValidate()
     {
-        LocalizedAudioClips = Resources.FindObjectsOfTypeAll<LocalizedAsset<Languages, AudioClip>>();
-        LocalizedTexts = Resources.FindObjectsOfTypeAll<LocalizedAsset<Languages, string>>();
+        LocalizedAudioClips.Clear();
+
+        string[] localizedAudiofiles = Directory.GetFiles("Assets/Parameters/Dialogues/LocalizedAudioClip", "*.asset", SearchOption.TopDirectoryOnly);
+
+        foreach(var localizedAudioFile in localizedAudiofiles)
+        {
+            LocalizedAudio localizedAudioClip = (LocalizedAudio)AssetDatabase.LoadAssetAtPath(localizedAudioFile, typeof(LocalizedAudio));
+            LocalizedAudioClips.Add(localizedAudioClip);
+        }
+
+        LocalizedTexts.Clear();
+
+        string[] localizedTextfiles = Directory.GetFiles("Assets/Parameters/Dialogues/LocalizedText", "*.asset", SearchOption.TopDirectoryOnly);
+
+        foreach (var localizedTextFile in localizedTextfiles)
+        {
+            LocalizedText localizedText = (LocalizedText)AssetDatabase.LoadAssetAtPath(localizedTextFile, typeof(LocalizedText));
+            LocalizedTexts.Add(localizedText);
+        }
     }
 #endif
 }

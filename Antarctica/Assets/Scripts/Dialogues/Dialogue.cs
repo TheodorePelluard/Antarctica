@@ -5,17 +5,18 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-[CreateAssetMenu(menuName ="Dialogues/Dialogue", fileName ="Dialogue")]
+[CreateAssetMenu(menuName = "Dialogues/Dialogue", fileName = "Dialogue")]
 public class Dialogue : ScriptableObject
 {
-    public LocalizedAudio DialogueClip;
-    public LocalizedText DialogueSubtitle;
+    [SerializeField] public LocalizedAudio DialogueClip;
+    [SerializeField] public LocalizedText DialogueSubtitle;
+    public float Delay = 0f;
 
 #if UNITY_EDITOR
     [ContextMenu("Create Releated Assets")]
     public void CreateRelatedAssets()
     {
-        if(DialogueClip == null)
+        if (DialogueClip == null)
         {
             LocalizedAudio localizedAudioClip = new LocalizedAudio();
             string newLocalizedAudioClipName = "LA" + name.Substring(2);
@@ -36,6 +37,16 @@ public class Dialogue : ScriptableObject
 
             DialogueSubtitle = localizedText;
         }
+    }
+
+    [ContextMenu("GetCreatedAssets")]
+    public void GetCreatedAssets()
+    {
+        string newLocalizedAudioClipName = "LA" + name.Substring(2);
+        DialogueClip = (LocalizedAudio)AssetDatabase.LoadAssetAtPath(string.Format("Assets/Parameters/Dialogues/LocalizedAudioClip/{0}.asset", newLocalizedAudioClipName), typeof(LocalizedAudio));
+        
+        string newLocalizedTextName = "LT" + name.Substring(2);
+        DialogueSubtitle = (LocalizedText)AssetDatabase.LoadAssetAtPath(string.Format("Assets/Parameters/Dialogues/LocalizedText/{0}.asset", newLocalizedTextName), typeof(LocalizedText));
     }
 #endif
 }

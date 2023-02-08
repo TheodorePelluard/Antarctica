@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbf920907205f294db2b44194192128e, type: 3}
-  m_Name: LT_Jack_01
+  m_Script: {fileID: 11500000, guid: 2056a7a04199c104bb47d9c07e3ba59d, type: 3}
+  m_Name: LA_Louis_Ladder_FR
   m_EditorClassIdentifier: 
-  Data: 
+  Data: {fileID: 0}
   LocalizedElements:
   - Language: 0
-    Element: C'est parti !
+    Element: {fileID: 8300000, guid: 0a7d59f9fbb8b3d46b25615a01acaf3a, type: 3}
   - Language: 1
-    Element: Let's go !
+    Element: {fileID: 8300000, guid: 561d3847ecc7c9043a15a1464f0d9e85, type: 3}

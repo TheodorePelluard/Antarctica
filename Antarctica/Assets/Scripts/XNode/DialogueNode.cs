@@ -9,6 +9,7 @@ public class DialogueNode : BaseNode
     [Input] public int Entry;
     [Output] public int Exit;
     public Dialogue DialogueParameter;
+    public float Delay = 0f;
     public bool AutoNext = false;
 
     public override void OnEnterNode()
