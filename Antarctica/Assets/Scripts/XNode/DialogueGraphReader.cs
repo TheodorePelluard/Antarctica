@@ -11,8 +11,14 @@ public class DialogueGraphReader : MonoBehaviour
     [Header("Dialogues")]
     public AudioSource DialogueSource;
     Coroutine _readDialogueNodeCoroutine;
+    SubtitleInterfaceManager _subtitleInterfaceManager;
 
-    private void Awake()
+    private void OnEnable()
+    {
+        _subtitleInterfaceManager = SubtitleInterfaceManager.Instance;
+    }
+
+    private void Start()
     {
         setupNodes();
     }
@@ -59,8 +65,10 @@ public class DialogueGraphReader : MonoBehaviour
 
             DialogueSource.clip = node.DialogueParameter.DialogueClip.Data;
             DialogueSource.Play();
-
-            yield return new WaitForSeconds(node.DialogueParameter.DialogueClip.Data.length + node.DialogueParameter.Delay);
+            _subtitleInterfaceManager.EnableSubtitle(node.DialogueParameter.DialogueSubtitle.Data);
+            yield return new WaitForSeconds(node.DialogueParameter.DialogueClip.Data.length);
+            _subtitleInterfaceManager.DisableSubtitle();
+            yield return new WaitForSeconds(node.DialogueParameter.Delay);
 
             DialogueSource.Stop();
             DialogueSource.clip = null;
