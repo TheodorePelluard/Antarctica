@@ -67,7 +67,10 @@ public class DialogueGraphReader : MonoBehaviour
             DialogueSource.Play();
             _subtitleInterfaceManager.EnableSubtitle(node.DialogueParameter.DialogueSubtitle.Data);
             yield return new WaitForSeconds(node.DialogueParameter.DialogueClip.Data.length);
-            _subtitleInterfaceManager.DisableSubtitle();
+
+            if(node.DialogueParameter.Delay != 0)
+                _subtitleInterfaceManager.DisableSubtitle();
+
             yield return new WaitForSeconds(node.DialogueParameter.Delay);
 
             DialogueSource.Stop();
