@@ -11,7 +11,6 @@ public class DialogueNodeEditor : BaseNodeEditor
     DialogueNode _dialogueNode;
     bool _showOnEntryEvent = true;
     bool _showOnExitEvent = true;
-    float _delayValue = 0f;
 
     public override void OnHeaderGUI()
     {

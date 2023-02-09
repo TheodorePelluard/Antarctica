@@ -133,7 +133,7 @@ MonoBehaviour:
   OnEntryDynamicPortsCount: 0
   OnExitDynamicPortsCount: 0
   StartEvent: {fileID: 11400000, guid: ddafc88b7aee08742ab5ed81c54f9031, type: 2}
-  AutoStart: 1
+  AutoStart: 0
   Exit: 0
 --- !u!114 &-3717425590474003861
 MonoBehaviour:

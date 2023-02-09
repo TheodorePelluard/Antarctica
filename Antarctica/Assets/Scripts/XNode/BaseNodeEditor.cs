@@ -10,7 +10,6 @@ using XNodeEditor;
 public class BaseNodeEditor : NodeEditor
 {
     BaseNode _baseNode;
-    bool showNodeAction = false;
 
     public override void OnHeaderGUI()
     {
