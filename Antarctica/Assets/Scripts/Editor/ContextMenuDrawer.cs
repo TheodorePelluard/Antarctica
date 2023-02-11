@@ -66,10 +66,10 @@ public class ContextMenuDrawer : Editor
 
 	protected virtual void InitInspector()
 	{
-		if (isInitialized && FORCE_INIT == false)
+		if ((isInitialized && FORCE_INIT == false) || styleEditBox == null)
 			return;
 
-		if(styleEditBox != null && EditorStyles.helpBox != null)
+		if(EditorStyles.helpBox != null)
 			styleEditBox = new GUIStyle(EditorStyles.helpBox) { padding = new RectOffset(5, 5, 5, 5) };
 
 		FindContextMenu();

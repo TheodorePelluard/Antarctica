@@ -32,7 +32,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void Update()
     {
-        if (_canLook.Get())
+        if (_canLook.Get() && Application.isFocused)
             rotateCamera();
     }
 

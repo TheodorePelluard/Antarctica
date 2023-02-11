@@ -80,10 +80,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (onSlope)
         {
-            _rb.AddForce(getSlopeMoveDirection() * _movementSpeed * 20f);
+            _rb.AddForce(getSlopeMoveDirection() * _movementSpeed * 20f, ForceMode.Force);
 
-            if (_rb.velocity.y > 0)
-                _rb.AddForce(Vector3.down * _slopeDownForce, ForceMode.Force);
+            //if (_rb.velocity.y > 0)
+            //    _rb.AddForce(Vector3.down * _slopeDownForce, ForceMode.Force);
         }
         else
             _rb.AddForce(_movementDirection.normalized * _movementSpeed * 10f, ForceMode.Force);
